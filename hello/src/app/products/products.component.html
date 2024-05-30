@@ -1,0 +1,7 @@
+<h1 class="mt-6 mb-6 text-3xl text-blue-500">List of Products</h1>
+@for(product of products; track product.productName) {
+    <p class="text-xl bg-blue p-4 border-2">{{product.productName}}</p> 
+    <p class="text-md bg-blue p-4 border-2">{{product.category}}</p> 
+    <p class="text-md bg-blue p-4 border-2">{{product.quantity}}</p>
+    <br>
+}
