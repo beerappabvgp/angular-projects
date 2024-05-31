@@ -1,7 +1,9 @@
-@defer (on viewport) {
-  <app-welcome />
-} @placeholder {
-  <p>Future Greetings</p>
-} @loading (minimum 3s) {
-  <p>Loading greetings.... </p>
-}
+<app-image />   
+
+<nav>
+    <a href="/">Home</a> |
+    <a href="/welcome">User</a> |
+    <a href="/signup">Sign Up?</a> | 
+    <a href="/signup/reset">Reset password?</a>
+</nav>
+<router-outlet />
