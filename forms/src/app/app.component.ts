@@ -5,11 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { AppService } from './app.service';
 import { ThemeService } from './theme.service';
+import { PipesComponent } from './pipes/pipes.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent , ReactiveFormsModule, SignupComponent],
+  imports: [RouterOutlet, UserComponent , ReactiveFormsModule, SignupComponent , PipesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
