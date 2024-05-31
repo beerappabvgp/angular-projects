@@ -8,6 +8,20 @@
     <h2 class="bg-slate-600 p-4 rounded-lg bg-2 w-full  font-semibold text-xl ">The server is not running.</h2>
 }
 
-<event-example />
 
-<app-products /> 
+<app-products />
+
+<event-example />
+<app-user occupation = "Software Developer" name = "Bharath"><app-user />
+
+<br><br>
+
+<app-child (messageEvent) = "receiveMessage($event)" />
+
+<br><br>
+
+<h2>{{ receivedMessage }}</h2>
+
+
+
+
