@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { AppService } from './app.service';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +15,11 @@ import { SignupComponent } from './signup/signup.component';
 })
 export class AppComponent {
   title = 'forms';
+  appService = inject(AppService)
+  root = this.appService.getRoot();
+  name = this.appService.getName();
+  constructor(private themeService : ThemeService) {
+    this.themeService = themeService;
+  }
+  theme = this.themeService.getTheme();
 }
