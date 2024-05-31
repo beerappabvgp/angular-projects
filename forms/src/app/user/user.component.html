@@ -1,0 +1,10 @@
+
+<h2 class="font-sans text-xl">Framework: {{ favoriteFramework }}</h2>
+
+<label for="framework">
+    Favorite Framework :   
+    <input type="text" id="framework" [(ngModel)] = "favoriteFramework" (keydown) = "onKeyDown($event)" class="bg-black p-4 mr-6 rounded-lg ml-4" placeholder="Enter your favorite framework">
+</label>
+
+<button (click) = "showFramework()" class= "bg-gray-300 p-4 rounded-lg b-2 text-white hover:bg-gray-500">Show Framework</button>
+
