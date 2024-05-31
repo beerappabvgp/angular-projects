@@ -17,5 +17,5 @@
         Email: 
         <input type="text" formControlName = "email" class = "bg-green-200 p-4 ml-4 border-2 rounded-lg shadow-md hover:bg-green-400 text-xl font-sans">
     </label>
-    <button type="submit" class="bg-green-200 p-4 ml-4 border-2 rounded-lg shadow-md hover:bg-green-400">Submit</button>
+    <button type="submit" class="bg-green-200 p-4 ml-4 border-2 rounded-lg shadow-md hover:bg-green-400"  [disabled] = "!profileForm.valid">Submit</button>
 </form> 

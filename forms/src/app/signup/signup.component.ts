@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -10,8 +10,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class SignupComponent {
   profileForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required , Validators.email]),
   });
 
   handleSubmit() {
