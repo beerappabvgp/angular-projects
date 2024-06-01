@@ -1,0 +1,22 @@
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+<p>---------------------------------------------------------------</p>
+
+<h1>Http  Client Module for interacting with remote servers.</h1>
+
+
+<div>
+  <ul>
+    <li *ngFor = "let post of posts">
+      {{post.title}}
+    </li>
+  </ul>
+
+  <button (click) = "addPost()">Add Post</button>
+  <button (click) = "updatePost(1)">Update post</button>
+  <button (click) = "deletePost(1)">Delete Post</button>
+  <p *ngIf = "error">{{error}}</p>
+</div>
