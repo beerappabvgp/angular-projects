@@ -1,0 +1,19 @@
+<h1>Directives !!!</h1>
+
+<button (click)="toggle()">Toggle</button>
+<div *ngIf="show">Content to toggle</div>
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<div [ngSwitch]="choice">
+    <p *ngSwitchCase = "'A'">Choice A</p>
+    <p *ngSwitchCase = "'B'">Choice B</p>
+    <p *ngSwitchDefault>Invalid Choice</p>
+</div>
+
+<button (click) = "toggleActive()">Toggle Class</button>
+<p [ngClass] = "{'active': isActive, 'inactive': !isActive}">This is an active paragraph.</p>
+<p [ngStyle] = "{'color' : isActive ? 'red' : 'black'}">Toggling between active and inactive.</p>
+
+<p appHighlight>Highlight Custom Directive</p>

@@ -1,0 +1,10 @@
+.active {
+    background-color: aqua;
+    font-size: larger;
+}
+
+.inactive {
+    background-color: greenyellow;
+    font-size: xx-large;
+    border: 6px;
+}

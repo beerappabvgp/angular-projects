@@ -1,0 +1,13 @@
+<p>services works!</p>
+
+<h1>Services used by other components </h1>
+
+<div>
+    <ul>
+        <li *ngFor = "let item of items">
+            {{item}}
+        </li>
+    </ul>
+    <input type="text" #newItem>
+    <button (click)="addItem(newItem.value); newItem.value = ''">Add Item</button>
+</div>
