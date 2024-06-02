@@ -1,0 +1,14 @@
+<form [formGroup] = "userForm" (ngSubmit)="onSubmit(userForm)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name" ngModel required>
+  <div *ngIf="userForm.controls.name?.invalid && userForm.controls.name?.touched">
+    Name is required
+  </div>
+  <label for="email">Email:</label>
+  <input type="email" id="email" formControlName="email" ngModel required email>
+  <div *ngIf="userForm.controls.email?.invalid && userForm.controls.email?.touched">
+    <div *ngIf="userForm.controls.email?.errors?.required">Email is required</div>
+    <div *ngIf="userForm.controls.email?.errors?.email">Invalid email format</div>
+  </div>
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
