@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { DataService } from './data.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { error } from 'console';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule],
+  imports: [RouterOutlet,CommonModule, RouterModule, RouterLink,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
