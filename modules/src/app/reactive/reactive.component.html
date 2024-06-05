@@ -1,0 +1,11 @@
+<form (ngSubmit) = "handleSubmit()" [formGroup] = "profileForm">
+    <label for="">Name : </label>
+    <input type="text" formControlName = "name">
+    <label for="">Email: </label>
+    <input type="text" formControlName = "email">
+    <button type = "submit" [disabled] = "!profileForm.valid">Submit</button>
+</form>
+
+<h2>Profile Form </h2>
+<p>Name : {{ profileForm.value.name }}</p>
+<p>Email : {{ profileForm.value.email }}</p>

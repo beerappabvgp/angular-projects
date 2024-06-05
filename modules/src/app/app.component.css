@@ -1,0 +1,10 @@
+button {
+    background-color: aqua;
+    padding: 4px;
+    border-radius: 10%;
+    border: 2px;
+}
+
+body {
+    background-color: black;
+}

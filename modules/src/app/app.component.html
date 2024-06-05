@@ -1,0 +1,51 @@
+
+
+
+
+
+<app-applayout />
+
+{{ cars[0] | uppercase | star }}
+
+{{ date | date:'medium'}}
+
+
+
+
+<h1>Title: {{ taskTitle }}</h1>
+<button [disabled] = "formIsValid">Submit</button>
+<button [attr.custom-attr] = "custom" type = "submit">Attributes</button>
+
+@if(isAdmin) {
+  <h1>Welcome Admin</h1>
+} @else {
+  <h2>Access is denied</h2>
+}
+
+@for (user of users ; track user.id) {
+  <li>
+    {{ user.id }} - {{ user.username }}
+  </li>
+}
+
+<app-events />
+
+<app-service />
+
+<button (click) = "addSum()">Add - {{ sum }}</button>
+
+
+<div [contentEditable] = "isEditable">Edit the content.</div>
+
+
+<button (click) = "greetPerson()">click to greet - {{greet}}</button>
+<br>
+
+<button (mouseover) = "handleMouseOver()">{{message}}</button>
+
+<app-input [occupation] = "occupation" [handler] = "addSum"></app-input>
+<br>
+<app-child (incrementCountEvent) = "handleCount($event)" />
+<br>
+{{ count }}
+

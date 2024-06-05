@@ -1,0 +1,16 @@
+<form [formGroup] = "productForm" (ngSubmit) = "handleSubmit()">
+    <label for="" id = "id">Enter product Id: </label>
+    <input type="number" formControlName = "id">
+    <hr>
+    <br>
+    <label for="" id = "name">Enter Name : </label>
+    <input type="text" formControlName = "name">
+    <br>
+    <label for="" id = "category">Enter category : </label>
+    <input type="text" formControlName = "email">
+    <br>
+    <label for="" id = "quantity">Enter quantity : </label>
+    <input type="number" formControlName = "quantity">
+    <br>
+    <button type = "submit">submit</button>
+</form>

@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+
+<label for="">Framework: </label>
+<input type="text" id = "framework" [(ngModel)] = "favoriteFramework">
+<h1>Favorite Framework : {{ favoriteFramework }}</h1>
+<label for="">Username: </label>
+<input type="text" [(ngModel)] = "username">
+<h1>Username : {{ username }}</h1>
+
+<br>
+
+<button (click) = "showFramework()">show framework</button>
+
+<br>
