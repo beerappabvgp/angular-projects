@@ -1,0 +1,11 @@
+<p [ngClass] = "isSpecial ? 'special' : '' " [ngStyle] = "" >directives works!</p>
+<h1 [appHighlight] = "color">Custom Directives for you!!!</h1>
+<h1>My First Attribute Directive</h1>
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color" defaultColor = "red">Highlight me!</p>
+<p [appHighlight]="color" defaultColor = "red">Highlight me too!</p>

@@ -1,0 +1,34 @@
+
+    
+
+
+<nav>
+    <a routerLink = "/">Home</a> | 
+    <a routerLink = "/input">Input</a> | 
+    <a routerLink = "/output">Output</a> | 
+    <a routerLink = "/function">Function output</a> 
+</nav>
+
+<app-input [name] = "name"></app-input>
+<app-output (panelClosed) = "savePanelState($event)"  (changeName) = "handleChangeName($event)" (user) = "handleUser($event)"></app-output>
+<h1>{{ panelState }}</h1>
+
+<app-function-output (onNameChange) = "handleChangeName($event)"></app-function-output>
+
+<app-content>
+    <h1>Hello app content</h1>
+    <p>This is ng content for you</p>
+</app-content>
+
+<app-view></app-view>
+
+<h1 #para>This content is changed programatically</h1>
+<button (click) = "updateContent()">Change Content of above heading</button>
+
+<app-dom></app-dom>
+<app-directives>
+</app-directives>
+
+<h1>{{users}}</h1>
+
+<app-forms></app-forms>
